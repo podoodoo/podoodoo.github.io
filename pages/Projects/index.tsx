@@ -3,5 +3,5 @@ import React from "react"
 type Props = {}
 
 export default function Projects({}: Props) {
-    return <div>Projects</div>
+  return <div className="w-full h-full flex mx-auto"></div>
 }
