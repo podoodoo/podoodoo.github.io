@@ -10,7 +10,7 @@ const Header = () => {
         initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: "0", opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="p-5"
+        className="p-5 fixed w-full bg-white z-50"
       >
         <div className="flex mx-auto justify-between sm:py-2 sm:px-4">
           <Link href="/">

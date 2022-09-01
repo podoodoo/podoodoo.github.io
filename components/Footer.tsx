@@ -10,12 +10,14 @@ export default function Footer({}: Props) {
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0", opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.75 }}
-      className="flex text-center justify-between p-10 gap-8"
+      className="fixed w-full bottom-0 left-0 bg-white"
     >
-      <Socials />
-      <p className="text-xs">
-        Copyright © {new Date().getFullYear()} Timothy Yang
-      </p>
+      <div className="flex text-center justify-between p-10 gap-8">
+        <Socials />
+        <p className="text-xs">
+          Copyright © {new Date().getFullYear()} Timothy Yang
+        </p>
+      </div>
     </motion.footer>
   )
 }

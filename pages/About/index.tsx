@@ -29,13 +29,13 @@ export default function About({}: Props) {
           AWS, Git, NoSQL, SQL, Figma
         </p>
       </div>
-      <div className="flex md:w-1/3 align-center justify-center">
+      <div className="md:w-1/3 justify-center">
         <a href="/TimothyYangResume.pdf">
-          <p className="justify-end flex">Click me for resume!</p>
+          <p className="text-right py-5">Click me for my resume!</p>
           <img
             src="/undraw_coding_re_iv62.svg"
             alt="undrew coding"
-            className="h-full"
+            className="w-full"
           />
         </a>
       </div>

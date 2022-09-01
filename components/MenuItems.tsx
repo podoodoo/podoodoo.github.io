@@ -1,5 +1,6 @@
 import Link from "next/link"
 import React from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 const links = [
   { name: "About", to: "/about", id: 1 },
@@ -9,14 +10,17 @@ const links = [
 
 const MenuItems = () => {
   return (
-    <div className="flex flex-col align-center h-full w-full space-y-5 py-28">
-      {links.map(({ name, to, id }) => (
-        <div
+    <div className="flex flex-col h-full w-full space-y-5 pt-28">
+      {links.map(({ name, to, id }, i) => (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: i * 0.2 }}
           key={id}
-          className="flex text-7xl sm:text-9xl justify-end hover:line-through"
+          className="text-7xl sm:text-9xl text-right hover:line-through"
         >
           <Link href={to}>{name}</Link>
-        </div>
+        </motion.div>
       ))}
     </div>
   )
