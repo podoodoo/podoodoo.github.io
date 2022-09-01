@@ -5,4 +5,5 @@ module.exports = {
     domains: ["cdn.sanity.io"],
   },
   experimental: { images: { allowFutureImage: true } },
+  pageExtensions: ["index.tsx"],
 }
