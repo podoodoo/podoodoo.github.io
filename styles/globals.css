@@ -6,7 +6,8 @@
 
 @font-face {
   font-family: "JetBrainsMono";
-  src: url("/JetBrainsMono-Regular.woff2") format("woff");
+  src: local("JetBrains Mono") url("/JetBrainsMono-Regular.woff2")
+    format("woff");
 }
 
 * {

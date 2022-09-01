@@ -5,4 +5,8 @@ module.exports = {
     domains: ["cdn.sanity.io"],
   },
   experimental: { images: { allowFutureImage: true } },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 }
