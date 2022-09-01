@@ -33,11 +33,11 @@ export default function About({}: Props) {
       <div className="md:w-1/3 justify-center">
         <a href="/TimothyYangResume.pdf">
           <p className="text-right py-5">Click me for my resume!</p>
-          <Image
+          {/* <Image
             src="/undraw_coding_re_iv62.svg"
             alt="undrew coding"
             className="w-full"
-          />
+          /> */}
         </a>
       </div>
     </div>
