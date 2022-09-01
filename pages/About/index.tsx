@@ -1,3 +1,4 @@
+import Image from "next/future/image"
 import React from "react"
 
 type Props = {}
@@ -13,12 +14,12 @@ export default function About({}: Props) {
         </p>
         <p>
           Passionate about <strong className="underline">web3</strong> and its
-          concepts, you'll often find me studying crypto, blockchain, etc.
+          concepts, you&apos;ll often find me studying crypto, blockchain, etc.
         </p>
         <p>I like simple, clean, legible code and I strive for efficiency.</p>
         <p>
-          In my free time, I'm either playing games, guitar, or golf. I like to
-          volunteer and am a youth group leader at my church.
+          In my free time, I&apos;m either playing games, guitar, or golf. I
+          like to volunteer and am a youth group leader at my church.
         </p>
         <p>
           <span className="underline">Languages</span>: Java,
@@ -32,7 +33,7 @@ export default function About({}: Props) {
       <div className="md:w-1/3 justify-center">
         <a href="/TimothyYangResume.pdf">
           <p className="text-right py-5">Click me for my resume!</p>
-          <img
+          <Image
             src="/undraw_coding_re_iv62.svg"
             alt="undrew coding"
             className="w-full"

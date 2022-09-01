@@ -19,7 +19,7 @@ const Intro = (props: Props) => {
       }
     }
     return () => {}
-  }, [isOpen])
+  }, [isOpen, typeItInstance])
 
   return (
     <div className="h-auto flex flex-col md:flex-row md:space-x-10 space-y-10 align-center md:space-between">
