@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 
 const links = [
   { name: "About", to: "/about", id: 1 },
-  //   { name: "Projects", to: "/projects", id: 2 },
-  //   { name: "Blog", to: "/blog", id: 3 },
+  { name: "Projects", to: "/projects", id: 2 },
+  { name: "Blog", to: "/blog", id: 3 },
 ]
 
 const MenuItems = () => {
