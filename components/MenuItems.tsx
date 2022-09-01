@@ -19,7 +19,7 @@ const MenuItems = () => {
           key={id}
           className="text-7xl sm:text-9xl text-right hover:line-through"
         >
-          <Link href={to}>{name}</Link>
+          <a href={to}>{name}</a>
         </motion.div>
       ))}
     </div>
