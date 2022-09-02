@@ -32,7 +32,7 @@ export default function Projects({ posts }: Props) {
             />
             <div className="p-5">
               <h3 className="text-lg">{post.title}</h3>
-              <span className="text-xs">
+              <span className="text-xs" suppressHydrationWarning={true}>
                 {new Date(post._createdAt).toDateString()}
               </span>
             </div>

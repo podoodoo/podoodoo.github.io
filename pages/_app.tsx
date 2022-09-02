@@ -9,8 +9,8 @@ import "../styles/globals.css"
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider store={store}>
-      <NextNProgress height={5} />
       <Layout>
+        <NextNProgress height={5} />
         <Component {...pageProps} />
       </Layout>
     </Provider>

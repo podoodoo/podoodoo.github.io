@@ -35,7 +35,9 @@ export default function About({}: Props) {
           <p className="text-right py-5">Click me for my resume!</p>
           <Image
             src="/undraw_coding_re_iv62.svg"
-            alt="undrew coding"
+            width={640}
+            height={480}
+            alt="undraw coding"
             className="w-full"
           />
         </a>

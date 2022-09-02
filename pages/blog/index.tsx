@@ -32,7 +32,7 @@ export default function Blog({ posts }: Props) {
             />
             <div className="p-5">
               <h3 className="text-lg">{post.title}</h3>
-              <span className="text-xs">
+              <span className="text-xs" suppressHydrationWarning={true}>
                 {new Date(post._createdAt).toDateString()}
               </span>
             </div>
@@ -46,7 +46,6 @@ export default function Blog({ posts }: Props) {
 export const getServerSideProps = async () => {
   const query = `*[_type == 'post' && category[0]._ref in *[_type == 'category' && title == "Blog"]._id]`
   const posts = await sanityClient.fetch(query)
-  console.log(posts)
   return {
     props: {
       posts,
