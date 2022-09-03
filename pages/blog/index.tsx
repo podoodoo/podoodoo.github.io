@@ -4,6 +4,7 @@ import { sanityClient, urlFor } from "../../sanity"
 import { Post } from "../../typings"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { groq } from "next-sanity"
 
 type Props = {
   posts: [Post]
@@ -44,7 +45,7 @@ export default function Blog({ posts }: Props) {
 }
 
 export const getServerSideProps = async () => {
-  const query = `*[_type == 'post' && category[0]._ref in *[_type == 'category' && title == "Blog"]._id]`
+  const query = groq`*[_type == 'post' && category[0]._ref in *[_type == 'category' && title == "Blog"]._id]`
   const posts = await sanityClient.fetch(query)
   return {
     props: {

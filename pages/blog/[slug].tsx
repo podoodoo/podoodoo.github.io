@@ -5,6 +5,7 @@ import { sanityClient, urlFor } from "../../sanity"
 import { Post } from "../../typings"
 import { PortableText } from "@portabletext/react"
 import { ParsedUrlQuery } from "querystring"
+import { groq } from "next-sanity"
 
 interface Params extends ParsedUrlQuery {
   slug: string
@@ -38,7 +39,7 @@ export default Post
 
 export const getStaticPaths = async () => {
   const paths = await sanityClient.fetch(
-    `*[_type == "post" && defined(slug.current)][].slug.current`
+    groq`*[_type == "post" && defined(slug.current)][].slug.current`
   )
 
   return {
@@ -51,7 +52,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   context
 ) => {
   const { slug = "" } = context.params! as Params
-  const query = `*[_type == 'post' && slug.current == $slug][0]`
+  const query = groq`*[_type == 'post' && slug.current == $slug][0]`
   const post = await sanityClient.fetch(query, { slug })
   return {
     props: {
