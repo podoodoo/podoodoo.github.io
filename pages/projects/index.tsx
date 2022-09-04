@@ -41,6 +41,7 @@ const Projects: NextPage<Props> = ({ posts }) => {
         //     </div>
         //   </motion.div>
         // </Link>
+        <div key={post._id}>{post.title}</div>
       ))}
     </div>
   )
