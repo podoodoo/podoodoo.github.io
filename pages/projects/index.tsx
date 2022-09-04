@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import Link from "next/link"
 import { sanityClient } from "../../sanity"
 import { Post } from "../../typings"
 import { groq } from "next-sanity"
@@ -16,9 +15,7 @@ const Projects: NextPage<Props> = ({ posts }) => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 object-cover">
       {projectPosts.map((post, i) => (
         <div key={post._id}>
-          <Link href={`/projects/${post.slug.current}`}>
-            <Card post={post} index={i} />
-          </Link>
+          <Card post={post} index={i} />
         </div>
       ))}
     </div>
