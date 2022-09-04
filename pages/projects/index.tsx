@@ -1,11 +1,9 @@
 import React, { useState } from "react"
-import Image from "next/future/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { sanityClient, urlFor } from "../../sanity"
+import { sanityClient } from "../../sanity"
 import { Post } from "../../typings"
 import { groq } from "next-sanity"
-import type { NextPage, GetServerSideProps } from "next"
+import type { NextPage, GetStaticProps } from "next"
 import Card from "../../components/Card"
 
 type Props = {
@@ -27,13 +25,14 @@ const Projects: NextPage<Props> = ({ posts }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const query = groq`*[_type == 'post' && category[0]._ref in *[_type == 'category' && title == "Project"]._id]`
   const posts = await sanityClient.fetch(query)
   return {
     props: {
       posts,
     },
+    revalidate: 7200,
   }
 }
 
