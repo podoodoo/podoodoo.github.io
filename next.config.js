@@ -5,8 +5,5 @@ module.exports = {
     domains: ["cdn.sanity.io", "timyang.vercel.app"],
   },
   experimental: { images: { allowFutureImage: true } },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  swcMinify: true,
 }
