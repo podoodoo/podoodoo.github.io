@@ -14,9 +14,7 @@ export default function Footer({}: Props) {
     >
       <div className="flex text-center justify-between p-10 gap-8">
         <Socials />
-        <p className="text-xs">
-          Copyright © {new Date().getFullYear()} Timothy Yang
-        </p>
+        <p className="text-xs">© {new Date().getFullYear()} Timothy Yang</p>
       </div>
     </motion.footer>
   )

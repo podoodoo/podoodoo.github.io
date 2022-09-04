@@ -1,5 +1,5 @@
 import React from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import MenuItems from "./MenuItems"
 import { useSelector, useDispatch } from "react-redux"
 import { actions } from "../redux/store"
@@ -29,7 +29,6 @@ const Menu = (props: Props) => {
         <motion.div
           initial="initial"
           animate="open"
-          // animate={isOpen ? "open" : "closed"}
           variants={menuVariants}
           className={`absolute bg-white w-screen h-screen top-0 bottom-0 left-0 ${
             isOpen ? "z-40" : "-z-20"

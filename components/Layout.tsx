@@ -9,7 +9,7 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="flex flex-col h-screen max-h-screen">
+    <div className="h-screen max-h-screen">
       <Header />
       <Container>{children}</Container>
       <Footer />
