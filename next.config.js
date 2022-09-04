@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["cdn.sanity.io"],
+    domains: ["cdn.sanity.io", "timyang.vercel.app"],
   },
   experimental: { images: { allowFutureImage: true } },
   i18n: {

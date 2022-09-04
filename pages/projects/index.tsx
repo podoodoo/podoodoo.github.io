@@ -1,19 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import { sanityClient, urlFor } from "../../sanity"
 import { Post } from "../../typings"
 import Image from "next/future/image"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { groq } from "next-sanity"
+import type { NextPage, GetServerSideProps } from "next"
 
 type Props = {
   posts: [Post]
 }
 
-export default function Projects({ posts }: Props) {
+const Projects: NextPage<Props> = ({ posts }) => {
+  const [projectPosts, setProjectPosts] = useState<Post[]>(posts)
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 object-cover">
-      {posts.map((post, i) => (
+      {projectPosts.map((post, i) => (
         <Link key={post._id} href={`/projects/${post.slug.current}`}>
           <motion.div
             initial={{ opacity: 0 }}
@@ -44,7 +46,7 @@ export default function Projects({ posts }: Props) {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const query = groq`*[_type == 'post' && category[0]._ref in *[_type == 'category' && title == "Project"]._id]`
   const posts = await sanityClient.fetch(query)
   return {
@@ -53,3 +55,5 @@ export const getServerSideProps = async () => {
     },
   }
 }
+
+export default Projects
