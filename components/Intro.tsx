@@ -25,7 +25,7 @@ const Intro = (props: Props) => {
     <div className="h-auto flex flex-col md:flex-row md:space-x-10 space-y-10 align-center md:space-between">
       <div className="md:w-2/3">
         <TypeIt
-          className="text-5xl md:text-8xl leading-relaxed"
+          className="text-4xl md:text-6xl leading-relaxed"
           element={"h1"}
           options={{
             cursor: false,
