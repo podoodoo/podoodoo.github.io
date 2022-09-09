@@ -7,7 +7,7 @@ type Props = {}
 
 const Intro = (props: Props) => {
   const [typeItInstance, setTypeItInstance] = useState<any>()
-  const [isDoneTyping, setIsDoneTyping] = useState<boolean>()
+  // const [isDoneTyping, setIsDoneTyping] = useState<boolean>()
   const isOpen = useSelector((state: any) => state.toggle)
 
   useEffect(() => {
@@ -31,16 +31,16 @@ const Intro = (props: Props) => {
             cursor: false,
             speed: 50,
             // cursorChar: "&#9608"
-            afterComplete: () => {
-              setIsDoneTyping(true)
-            },
+            // afterComplete: () => {
+            //   setIsDoneTyping(true)
+            // },
           }}
           getBeforeInit={(instance: any) => {
             instance
               .pause(1000)
               .type("Hello!", { delay: "1000" })
               .break()
-              .type("I'm Tim.", { delay: "2000" })
+              .type("I'm Tim.", { delay: "1000" })
               .break()
               .type("I like to code.", { delay: "2000" })
             return instance
@@ -52,16 +52,16 @@ const Intro = (props: Props) => {
         />
       </div>
 
-      {isDoneTyping && (
-        <motion.img
-          initial={{ y: "75%", opacity: 0 }}
-          animate={{ y: "0", opacity: 1 }}
-          transition={{ delay: 1 }}
-          src="/undraw_fireworks_re_2xi7.svg"
-          alt="undraw fireworks"
-          className="flex h-full w-full md:w-1/3 -z-10"
-        />
-      )}
+      {/* {isDoneTyping && ( */}
+      <motion.img
+        initial={{ y: "75%", opacity: 0 }}
+        animate={{ y: "0", opacity: 1 }}
+        transition={{ delay: 2 }}
+        src="/undraw_fireworks_re_2xi7.svg"
+        alt="undraw fireworks"
+        className="flex h-full w-full md:w-1/3 -z-10"
+      />
+      {/* )} */}
     </div>
   )
 }
