@@ -303,25 +303,17 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.0.12":
-  version "18.0.17"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.17.tgz"
+"@types/react@*", "@types/react@18.0.24", "@types/react@^18.0.12":
+  version "18.0.24"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.24.tgz#2f79ed5b27f08d05107aab45c17919754cc44c20"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@18.0.9":
-  version "18.0.9"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.9.tgz"
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@^18.0.12":
-  version "18.0.17"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.17.tgz"
+"@types/react@^17.0.42":
+  version "17.0.52"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.52.tgz#10d8b907b5c563ac014a541f289ae8eaa9bf2e9b"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
