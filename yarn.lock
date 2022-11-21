@@ -319,9 +319,9 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^18.0.12":
-  version "18.0.17"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.17.tgz"
+"@types/react@^17.0.42":
+  version "17.0.52"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.52.tgz#10d8b907b5c563ac014a541f289ae8eaa9bf2e9b"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1124,9 +1124,9 @@ fraction.js@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
 
-framer-motion@^7.2.1:
-  version "7.2.1"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-7.2.1.tgz"
+framer-motion@^7.6.7:
+  version "7.6.7"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-7.6.7.tgz#4ab0f33d0b77b4fe2289ce8b7c5cf6448d84f23d"
   dependencies:
     "@motionone/dom" "10.13.1"
     framesync "6.1.2"
