@@ -319,9 +319,9 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^18.0.12":
-  version "18.0.17"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.17.tgz"
+"@types/react@^17.0.42":
+  version "17.0.52"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.52.tgz#10d8b907b5c563ac014a541f289ae8eaa9bf2e9b"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1124,14 +1124,13 @@ fraction.js@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
 
-framer-motion@^7.2.1:
-  version "7.2.1"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-7.2.1.tgz"
+framer-motion@^7.6.19:
+  version "7.6.19"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-7.6.19.tgz#a24ea890881374f4184be5abb773ce8e4a0d3734"
   dependencies:
     "@motionone/dom" "10.13.1"
     framesync "6.1.2"
     hey-listen "^1.0.8"
-    popmotion "11.0.5"
     style-value-types "5.1.2"
     tslib "2.4.0"
   optionalDependencies:
@@ -1798,15 +1797,6 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
 pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz"
-
-popmotion@11.0.5:
-  version "11.0.5"
-  resolved "https://registry.npmjs.org/popmotion/-/popmotion-11.0.5.tgz"
-  dependencies:
-    framesync "6.1.2"
-    hey-listen "^1.0.8"
-    style-value-types "5.1.2"
-    tslib "2.4.0"
 
 postcss-import@^14.1.0:
   version "14.1.0"
